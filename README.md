@@ -4,7 +4,7 @@
 
 1. Clone this repo using:
   ```shell
-  $ git clone git@github.com:ovasylenko/skillcrucial-react-redux-boilerplate.git
+  $ git clone git@github.com:katyeheisenberg/boiler-sk.git
   ```
 
 2. To install dependencies and clean the git repo run:
