@@ -1,4 +1,4 @@
-# SkillCrucial React Redux boilerplate
+# My boiler-sk
 
 ## Quick start
 
@@ -65,7 +65,7 @@ By default `webpack.development.config.js` is used unless you build the applicat
 ```Shell
 yarn install
 ```
-Installs the dependencies.
+Installs all the dependencies.
 
 #### Development
 
@@ -135,7 +135,6 @@ yarn run lint:server
 ```
 
 Will analyse only  `server/**/**.js` files
-
 #### Docker
 Nginx web server working on 443, 80 ports on localhost
 
