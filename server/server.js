@@ -35,7 +35,7 @@ const middleware = [
 
 middleware.forEach((it) => server.use(it))
 
-server.get('/api/v1/users', async (req, res) => {
+server.get('/api/v1/users', async (req, res) => { //route
   const { data: users } = await axios('https://jsonplaceholder.typicode.com/users')
   res.json(users)
 })
