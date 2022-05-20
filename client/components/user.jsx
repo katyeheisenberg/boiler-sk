@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams,Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 
 const Header = () => {
@@ -27,10 +27,11 @@ const User = () => {
     <Header />
     {name.map(user => {  
       return <div key={user.id} style={{display: "flex"}}>  
-        <div style={{width: '250px'}}>{user.name}</div>     
+        <div style={{width: '250px'}}>{user.name}</div>
       </div>  
-    })}  
-  </div>
+    })}
+    <div><Link to="/:username/:repositoryName">Go to repo</Link></div>
+    </div>
 }
 
 

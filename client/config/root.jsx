@@ -7,6 +7,7 @@ import store, { history } from '../redux'
 
 import Main from '../components/main'
 import User from '../components/user'
+import Inner from '../components/inner'
 // import Home from '../components/home'
 // import DummyView from '../components/dummy-view'
 // import NotFound from '../components/404'
@@ -59,11 +60,11 @@ const RootComponent = (props) => {
           <Switch>
             <Route exact path="/" render={() => <Main changeState={changeState} />} />
             <Route exact path="/:username" component={User} />
-            {/* <Route exact path="/:username/:repositoryName" component={DummyView} />
-            <PrivateRoute exact path="/hidden-route" component={DummyView} />
-            <OnlyAnonymousRoute exact path="/anonymous-route" component={DummyView} />
+            <Route exact path="/:username/:repositoryName" component={Inner} />
+            {/* <PrivateRoute exact path="/hidden-route" component={DummyView} />
+            <OnlyAnonymousRoute exact path="/anonymous-route" component={DummyView} /> */}
 
-            <Route component={NotFound} /> */} */
+            {/* <Route component={NotFound} /> */}
           </Switch>
         </Startup>
       </RouterSelector>
