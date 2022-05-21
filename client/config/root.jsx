@@ -4,7 +4,6 @@ import { ConnectedRouter } from 'connected-react-router'
 import { Switch, Route, StaticRouter } from 'react-router-dom'
 
 import store, { history } from '../redux'
-
 import Main from '../components/main'
 import User from '../components/user'
 import Inner from '../components/inner'

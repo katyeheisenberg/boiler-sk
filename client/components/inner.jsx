@@ -2,13 +2,16 @@ import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 
+
+
+
 const Header = () => {
-    const { username } = useParams()
-    return <div>
-        <div>{username}</div>
-        <div><Link to="/">Go to search</Link></div>
-        <div><Link to="/:userName">Go to User</Link></div>
-    </div>
+  const { username } = useParams()
+  return <div>
+      <div>{username}</div>
+      <div><Link to="/">Go to search</Link></div>
+      <div><Link to="/:userName">Go to User</Link></div>
+  </div>
 }
 
 const Inner = () => {
@@ -23,7 +26,7 @@ const Inner = () => {
     return () => {
 
     }
-  }, [file])
+  }, [username, repositoryName])
   return <div id="description">
     <Header />
     README
