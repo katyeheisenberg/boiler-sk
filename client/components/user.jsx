@@ -10,7 +10,7 @@ const Header = () => {
     </div>
 }
 
-const User = (props) => {
+const User = () => {
     const { username } = useParams()
     const [name, setName] = useState([{}])
     useEffect(async () => {
@@ -22,21 +22,23 @@ const User = (props) => {
             
         }
     }, [name])
-    const [repName, getName] = useState([{}])
-    const repoN = name.map((it) => it.name)
-    getName(repoN)
-    const onClick = () => {
-        props.addRepo(repName)
-      }
+    // const [repName, getName] = useState([{}])
+    // const repoN = name.map((it) => it.name)
+    // getName(repoN)
+    // const onClick = () => {
+    //     props.addRepo(repName)
+    //   }
 
     return <div>  
     <Header />
     {name.map(user => {  
       return <div key={user.id} style={{display: "flex"}}>  
-        <div style={{width: '250px'}}>{user.name}</div>
+        <div style={{width: '250px'}}>
+          {user.name}
+          <Link to={`/${username}/${user.name}`}>{user.html_url}</Link>
+          </div>
       </div>  
     })}
-    <button type="button" onClick={onClick}>Button</button>
     </div>
 }
 

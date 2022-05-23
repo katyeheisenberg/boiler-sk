@@ -52,20 +52,20 @@ const RootComponent = (props) => {
   useEffect(() => {
     history.push(`/${user}`)
   }, [user])
-  const [repo, setRepo] = useState('')
-  const addRepo = (str) => {
-    setRepo(str)
-  }
-  useEffect(() => {
-    history.push(`/${user}/${repo}`)
-  })
+  // const [repo, setRepo] = useState('')
+  // const addRepo = (str) => {
+  //   setRepo(str)
+  // }
+  // useEffect(() => {
+  //   history.push(`/${user}/${repo}`)
+  // })
   return (
     <Provider store={store}>
       <RouterSelector history={history} location={props.location} context={props.context}>
         <Startup>
           <Switch>
             <Route exact path="/" render={() => <Main changeState={changeState} />} />
-            <Route exact path="/:username" render={() => <User changeState={addRepo} />} />
+            <Route exact path="/:username" component={User} />
             <Route exact path="/:username/:repositoryName" component={Inner} />
             {/* <PrivateRoute exact path="/hidden-route" component={DummyView} />
             <OnlyAnonymousRoute exact path="/anonymous-route" component={DummyView} /> */}
