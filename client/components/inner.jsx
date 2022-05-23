@@ -27,10 +27,14 @@ const Inner = () => {
 
     }
   }, [username, repositoryName])
-  return <div id="description">
+  return <div>
     <Header />
-    README
-    {file}
+    <div>
+      README
+    </div>
+    <div>
+      {file}
+    </div>
   </div>
 }
 

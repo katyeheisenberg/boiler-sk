@@ -10,7 +10,7 @@ const Header = () => {
     </div>
 }
 
-const User = () => {
+const User = (props) => {
     const { username } = useParams()
     const [name, setName] = useState([{}])
     useEffect(async () => {
@@ -22,6 +22,12 @@ const User = () => {
             
         }
     }, [name])
+    const [repName, getName] = useState([{}])
+    const repoN = name.map((it) => it.name)
+    getName(repoN)
+    const onClick = () => {
+        props.addRepo(repName)
+      }
 
     return <div>  
     <Header />
@@ -30,7 +36,7 @@ const User = () => {
         <div style={{width: '250px'}}>{user.name}</div>
       </div>  
     })}
-    <div><Link to="/:username/:repositoryName">Go to repo</Link></div>
+    <button type="button" onClick={onClick}>Button</button>
     </div>
 }
 

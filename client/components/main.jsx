@@ -40,7 +40,7 @@ const Main = (props) => {
     }
     return <div>
         <input type="text" value={str} onChange={onChange}/>
-        <button type="button" id="search-button" onClick={onClick}>Button</button>
+        <button type="button" onClick={onClick}>Button</button>
     </div>
 
 }
