@@ -52,13 +52,6 @@ const RootComponent = (props) => {
   useEffect(() => {
     history.push(`/${user}`)
   }, [user])
-  // const [repo, setRepo] = useState('')
-  // const addRepo = (str) => {
-  //   setRepo(str)
-  // }
-  // useEffect(() => {
-  //   history.push(`/${user}/${repo}`)
-  // })
   return (
     <Provider store={store}>
       <RouterSelector history={history} location={props.location} context={props.context}>
