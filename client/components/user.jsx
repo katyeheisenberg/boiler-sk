@@ -22,7 +22,7 @@ const User = () => {
             
         }
     }, [name])
-    return <div className="bg-gradient-to-tr from-green-500 to-teal-800 w-screen h-screen grid justify-items-center">
+    return <div className="bg-gradient-to-tr from-green-500 to-teal-800 w-full h-full grid justify-items-center">
         <div>
           <Header />
         </div>  

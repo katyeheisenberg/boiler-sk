@@ -21,7 +21,7 @@ const Inner = () => {
         readFile(it.data)
     })
     .catch(() => {
-      readFile('README ISNT FOUND')
+      readFile('Unfortunately, there is no Readme')
     })
     return () => {
 
