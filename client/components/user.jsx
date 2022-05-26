@@ -27,7 +27,6 @@ const User = () => {
           <Header />
         </div>  
         <div className="bg-gradient-to-br from-green-500 to-teal-800 w-full h-full justify-self-center rounded-lg border border-green-100 py-2 px-2">
-        <div>
           {name.map(user => {  
             return <div key={user.id}>  
                 <div className="text-white font-mono font-bold">
@@ -36,10 +35,10 @@ const User = () => {
                 <div className="font-mono font-bold text-green-900">
                  Repository URL:<Link to={`/${username}/${user.name}`} className="text-green-200">{user.html_url}</Link>
                 </div>
-           </div>})}
+                </div>
+          })}
         </div>
         </div>
-    </div>
 }
 
 
