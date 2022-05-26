@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const Header = () => {
     const { username } = useParams()
-    return <div>
+    return <div >
         <div>{username}</div>
         <div><Link to="/">Go to search</Link></div>
     </div>
@@ -22,15 +22,8 @@ const User = () => {
             
         }
     }, [name])
-    // const [repName, getName] = useState([{}])
-    // const repoN = name.map((it) => it.name)
-    // getName(repoN)
-    // const onClick = () => {
-    //     props.addRepo(repName)
-    //   }
-
-    return <div>  
-    <Header />
+    return <div className="bg-gradient-to-tr from-green-500 to-teal-800 w-screen h-screen">  
+    <div className="bg-gradient-to-br from-green-500 to-teal-800 "><Header />
     {name.map(user => {  
       return <div key={user.id} style={{display: "flex"}}>  
         <div style={{width: '250px'}}>
@@ -39,6 +32,8 @@ const User = () => {
           </div>
       </div>  
     })}
+    </div>
+    
     </div>
 }
 
