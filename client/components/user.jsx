@@ -22,22 +22,20 @@ const User = () => {
             
         }
     }, [name])
-    return <div className="bg-gradient-to-tr from-green-500 to-teal-800 w-screen h-screen">
+    return <div className="bg-gradient-to-tr from-green-500 to-teal-800 w-screen h-screen grid justify-items-center">
         <div>
           <Header />
         </div>  
-        <div className="bg-gradient-to-br from-green-500 to-teal-800 w-fit place-self-center">
-        <div className="justify-self-center">
+        <div className="bg-gradient-to-br from-green-500 to-teal-800 w-fit h-fit justify-self-center rounded-lg border border-green-100 py-2 px-2">
+        <div>
           {name.map(user => {  
-            return <div key={user.id} className="justify-items-start">  
-              <div>
+            return <div key={user.id}>  
                 <div className="text-white font-mono font-bold">
-              {user.name}
+                  {user.name}
                 </div>
-                <div className="justify-self-start font-mono font-bold text-green-900">
-               Repository URL:<Link to={`/${username}/${user.name}`} className="text-green-200">{user.html_url}</Link>
+                <div className="font-mono font-bold text-green-900">
+                 Repository URL:<Link to={`/${username}/${user.name}`} className="text-green-200">{user.html_url}</Link>
                 </div>
-              </div>
            </div>})}
         </div>
         </div>
