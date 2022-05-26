@@ -26,7 +26,7 @@ const User = () => {
         <div>
           <Header />
         </div>  
-        <div className="bg-gradient-to-br from-green-500 to-teal-800 w-fit h-fit justify-self-center rounded-lg border border-green-100 py-2 px-2">
+        <div className="bg-gradient-to-br from-green-500 to-teal-800 w-full h-full justify-self-center rounded-lg border border-green-100 py-2 px-2">
         <div>
           {name.map(user => {  
             return <div key={user.id}>  
