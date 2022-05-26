@@ -4,9 +4,9 @@ import axios from 'axios'
 
 const Header = () => {
     const { username } = useParams()
-    return <div >
-        <div>{username}</div>
-        <div><Link to="/">Go to search</Link></div>
+    return <div className="grid justify-items-stretch">
+        <div className="justify-self-center text-white font-mono font-bold text-2xl tracking-wide">{username}</div>
+        <div className="justify-self-center text-emerald-200 font-mono font-bold text-xl tracking-tighter"><Link to="/">Go to search</Link></div>
     </div>
 }
 
@@ -22,18 +22,25 @@ const User = () => {
             
         }
     }, [name])
-    return <div className="bg-gradient-to-tr from-green-500 to-teal-800 w-screen h-screen">  
-    <div className="bg-gradient-to-br from-green-500 to-teal-800 "><Header />
-    {name.map(user => {  
-      return <div key={user.id} style={{display: "flex"}}>  
-        <div style={{width: '250px'}}>
-          {user.name}
-          <Link to={`/${username}/${user.name}`}>{user.html_url}</Link>
-          </div>
-      </div>  
-    })}
-    </div>
-    
+    return <div className="bg-gradient-to-tr from-green-500 to-teal-800 w-screen h-screen">
+        <div>
+          <Header />
+        </div>  
+        <div className="bg-gradient-to-br from-green-500 to-teal-800 w-fit place-self-center">
+        <div className="justify-self-center">
+          {name.map(user => {  
+            return <div key={user.id} className="justify-items-start">  
+              <div>
+                <div className="text-white font-mono font-bold">
+              {user.name}
+                </div>
+                <div className="justify-self-start font-mono font-bold text-green-900">
+               Repository URL:<Link to={`/${username}/${user.name}`} className="text-green-200">{user.html_url}</Link>
+                </div>
+              </div>
+           </div>})}
+        </div>
+        </div>
     </div>
 }
 
